@@ -13,16 +13,17 @@ export const AddContentModal = ({onClose, onAdd}:AddContentModalProps) => {
 
   const handleSubmit = (e:React.FormEvent)=>{
    e.preventDefault();
-   const tags= tagsInput.split(",").map(t=>t.trim()).filter(Boolean)
+   const tags= tagsInput.split(",").map(t=>t.trim()).filter(Boolean);
+   onAdd({ type, link, title, tags });
   }
 
   return (
     <div className="modal-overlay">
-      <div className="modal-content">
+      <div className="modal-content" onClick={e=>e.stopPropagation()}>
         <div className="modal-header">
           <div className="modal-title">Add New Content</div>
           <button className="close-btn" onClick={onClose}>
-            x
+            X
           </button>
         </div>
 

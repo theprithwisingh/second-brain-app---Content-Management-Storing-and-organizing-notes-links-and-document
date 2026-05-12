@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { AddContentModal } from './components/AddContentModal';
+import ShareContent from './pages/ShareContent';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/addContent" element={<AddContentModal />} />
+        <Route path="/share/:shareLink" element={<ShareContent />} />
+
       </Routes>
     </BrowserRouter>
   );

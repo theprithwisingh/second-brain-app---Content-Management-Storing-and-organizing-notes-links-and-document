@@ -42,7 +42,7 @@ const userSchema = new mongoose_1.default.Schema({
 const tagSchema = new mongoose_1.default.Schema({
     title: { type: String, Required: true, unique: true },
 });
-const contentTypes = ["documents", "tweet", "youtube", "link"];
+const contentTypes = ["document", "tweet", "youtube", "link"];
 const contentSchema = new mongoose_1.Schema({
     link: { type: String, required: true },
     type: { type: String, enum: contentTypes, required: true },

@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
 const tagSchema = new mongoose.Schema({
   title: { type: String, Required: true, unique: true },
 });
-const contentTypes = ["documents", "tweet", "youtube", "link"];
+const contentTypes = ["document", "tweet", "youtube", "link"];
 
 const contentSchema = new Schema({
   link: { type: String, required: true },
